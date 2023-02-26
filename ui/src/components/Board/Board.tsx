@@ -7,10 +7,11 @@ import "./style.css"
 const socket = io("http://localhost:5000");
 
 interface Props {
-  selectedColor: string
+  selectedColor: string,
+  selectedLineWidth: number,
 }
 
-const Board = ({selectedColor}: Props) => {
+const Board = ({selectedColor, selectedLineWidth}: Props) => {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -34,8 +35,8 @@ const Board = ({selectedColor}: Props) => {
     const canvas = ref.current as unknown as HTMLCanvasElement
     const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
     ctx.strokeStyle = selectedColor
-    console.log(ctx.strokeStyle)
-  }, [selectedColor])
+    ctx.lineWidth = selectedLineWidth
+  }, [selectedColor, selectedLineWidth])
 
 
   return (

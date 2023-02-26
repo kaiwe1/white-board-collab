@@ -4,12 +4,11 @@
     height: 100%;
 }
 
-.color-picker-container {
+.header-container {
     text-align: center;
 }
 
 .board-container {
-    width: 90%;
-    height: 90%;
-    margin: auto;
+    width: 100%;
+    height: 100%;
 }

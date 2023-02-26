@@ -5,8 +5,7 @@ let timer: NodeJS.Timeout | null = null
 const useDrawOnCanvas = (canvas: HTMLCanvasElement, socket: Socket) => {
     // get canvas 2D context and set him correct size
     const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
-    ctx.strokeStyle = "red";
-    
+  
     // last known position
     const pos = { x: 0, y: 0 };
 
@@ -41,7 +40,6 @@ const useDrawOnCanvas = (canvas: HTMLCanvasElement, socket: Socket) => {
 
         ctx.beginPath(); // begin
 
-        ctx.lineWidth = 5;
         ctx.lineCap = 'round';
 
         ctx.moveTo(pos.x, pos.y); // from
