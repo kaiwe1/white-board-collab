@@ -3,7 +3,7 @@ import Board from '../Board/Board'
 import "./style.css"
 
 const Container = () => {
-  const [color, setColor] = useState("red")
+  const [color, setColor] = useState("#ff0000")
 
   return (
     <div className="container">

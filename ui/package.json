@@ -3,7 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "install-server": "cd ../server && npm install",
+    "install-ui": "npm install",
+    "install-both": "npm install concurrently -D & concurrently \"npm run install-server\" \"npm run install-ui\"",
+    "start": "concurrently \"npm run dev\" \"npm run server\"",
     "dev": "vite",
+    "server": "node ../server/server.js",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -17,6 +22,7 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "concurrently": "^7.6.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }
