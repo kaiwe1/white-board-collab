@@ -12,7 +12,7 @@ https://whiteboard-dusky.vercel.app/
 
 ## About <a name = "about"></a>
 
-A collaborative whiteboard using express, socket.io, canvas and react, redux.
+A collaborative whiteboard using express, socket.io, canvas, react and redux.
 
 ## Getting Started <a name = "getting_started"></a>
 
