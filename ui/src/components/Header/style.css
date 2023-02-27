@@ -4,6 +4,29 @@
     padding-bottom: 15px;
 }
 
-.line-width-label {
-    margin-left: 15px;
+.color-picker {
+    display: inline-block;
+    position: relative;
+}
+
+.color-picker-popup {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+}
+
+.fa-pen {
+    padding: 5px;
+}
+
+.fa-pen:hover {
+    background-color: #dddddd;
+}
+
+.fa-angle-down {
+    padding: 5px;
+}
+
+.fa-angle-down:hover {
+    background-color: #dddddd;
 }

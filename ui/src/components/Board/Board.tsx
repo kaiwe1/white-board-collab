@@ -1,18 +1,21 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import useDrawOnCanvas from "../../hooks/useDrawOnCanvas"
 import io from 'socket.io-client';
 import "./style.css"
+import store from "../../redux";
 
 // connect to the server
 const socket = io("http://localhost:5000");
 
-interface Props {
-  selectedColor: string,
-  selectedLineWidth: number,
-}
-
-const Board = ({selectedColor, selectedLineWidth}: Props) => {
+const Board = () => {
   const ref = useRef(null)
+  const [selectedColor, setColor] = useState("#ffffff")
+  const [selectedLineWidth, setLineWidth] = useState(5)
+
+  store.subscribe(() => {
+    setColor(store.getState().color)
+    setLineWidth(store.getState().lineWidth)
+  })
 
   useEffect(() => {
     // add draw feature on canvas
